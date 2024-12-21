@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTLIPH</title>
+    <link rel="icon" href="Assets/ALPH.png" type="image/x-icon">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div id="app">
+        <h1>LOGIN AND SIGNUP</h1>
+        
+        <!-- Login Form -->
+        <form id="login-form" class="form-container" onsubmit="return false;">
+            <h2>LOGIN</h2>
+            <input type="text" id="login-username" placeholder="Username" required aria-label="Username">
+            <input type="password" id="login-password" placeholder="Password" required aria-label="Password">
+            <button type="submit" onclick="login()">Login</button>
+            <p id="login-error-message" class="error"></p>
+            <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign up</a></p>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signup-form" class="form-container" style="display:none;" onsubmit="return false;">
+            <h2>SIGN UP</h2>
+            <input type="text" id="signup-username" placeholder="Username" required aria-label="Username">
+            <input type="password" id="signup-password" placeholder="Password" required aria-label="Password">
+            <button type="submit" onclick="signup()">Sign Up</button>
+            <p id="signup-error-message" class="error"></p>
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+        </form>
+
+    </div>
+    <script src="Login.js"></script>
+</body>
+</html>
